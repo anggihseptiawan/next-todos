@@ -3,3 +3,9 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+@media (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+}

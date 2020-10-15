@@ -1,7 +1,7 @@
-import { table, getMinifyRecords } from "./utils/Airtable";
-import auth0 from "./utils/auth0";
+import OwnRecord from "./middleware/OwnRecord";
+import { getMinifyRecords, table } from "./utils/Airtable";
 
-export default auth0.requireAuthentication(async (req, res) => {
+export default OwnRecord(async (req, res) => {
 	const { id } = req.body;
 	try {
 		const deleteRecord = await table.destroy([id]);
