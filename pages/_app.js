@@ -1,12 +1,11 @@
 import "../styles/main.css";
-import { Provider } from "react-redux";
-import store from "../redux/store";
+import { TodosProvider } from "../context/TodoContext";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Provider store={store}>
+		<TodosProvider>
 			<Component {...pageProps} />
-		</Provider>
+		</TodosProvider>
 	);
 }
 

@@ -1,15 +1,17 @@
 const intialState = {
-	data: null,
+	todos: null,
 };
 
 const reducer = (state = intialState, action) => {
-    switch (action.type) {
-        case "GET_TODO":
-            return state;
-        default:
-            return state;
-    }
-	return state;
+	switch (action.type) {
+		case "GET_TODOS":
+			return {
+				...state,
+				todos: action.value,
+			};
+		default:
+			return state;
+	}
 };
 
 export default reducer;
