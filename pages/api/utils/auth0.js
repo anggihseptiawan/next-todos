@@ -12,8 +12,8 @@ export default initAuth0({
 	clientId: AUTH0_CLIENT_ID,
 	clientSecret: AUTH0_CLIENT_SECRET,
 	scope: "openid profile",
-	redirectUri: "http://localhost:3000/api/callback",
-	postLogoutRedirectUri: "http://localhost:3000/",
+	redirectUri: "https://sepstodo.vercel.app/api/callback",
+	postLogoutRedirectUri: "https://sepstodo.vercel.app/",
 	session: {
 		// The secret used to encrypt the cookie.
 		cookieSecret: COOKIE_SECRET,
